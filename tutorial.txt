@@ -1,0 +1,24 @@
+1.After cloning the 'repository' into your desired directory, your git current 'branch' will be "Master".
+  Working on "Master" is never a good idea, we want to work on another branch.
+  Perform: git checkout tutorial_branch.
+  Prerequisite: A branch named "tutorial_branch" must exist.
+2.After changing the current branch to be "tutorial_branch", we might have to pull in order to have the most updated version of that branch.
+  Perform: git pull.
+3.Now we have the latest version of "tutorial_branch", We could work on this branch locally and no changes will be uploaded to the remote branch.
+  We can also create a new branch in order to work in a completely isolated environment.
+  Perform: git branch "[USER_NAME]".
+  ([USER_NAME] should be your name).
+4.Now there is a new branch named "[USER_NAME]", our current branch is still tutorial_branch.
+  We can switch our branch using checkout.
+  Perform: git checkout "[USER_NAME]".
+  (3+4 could have been replaced with a single line : git checkout -b "[USER_NAME]").
+5.Now that we have the new branch as our current branch, we can make any changes that we would like.
+  Create a new file named: [USER_NAME].txt in the directory.
+  After creating a new file we have unstaged and uncommitted changes in our local repository.
+  in order to commit these changes we should perform the next actions:
+  "git add ." - this line stage all of the changes that we made, modified files, newly created files etc..
+  "git commit -m '[ADD_MESSAGE_HERE]'" - this line commits all of the staged changes. the message should be informative.
+6.Now we have some commits that the remote branch does not hold and we should 'push' our changes.
+  Perform: git push --set-upstream origin [USER_NAME].(if there is already a remote branch named [USER_NAME] we could just perform "git push").
+  
+  
